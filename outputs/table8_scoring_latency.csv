@@ -1,0 +1,5 @@
+Call type,Calls timed,Mean ms,Median (p50) ms,p95 ms,p99 ms,Per-transaction ms (mean),Meets 100 ms SLA at p99
+Single transaction,1000,0.795,0.766,0.943,1.101,0.795,Yes
+Micro-batch of 10,300,1.077,0.841,0.997,1.2,0.108,Yes
+Micro-batch of 100,200,0.944,0.903,1.157,1.241,0.009,Yes
+"Micro-batch of 1,000",100,1.107,1.073,1.25,1.271,0.001,Yes

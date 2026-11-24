@@ -1,0 +1,18 @@
+Item,Detail
+Purpose,"Score card transactions for fraud risk in real time; route to approve, step-up or decline"
+Dataset,"ULB/Worldline European card transactions, Sept. 2013; 284,807 rows, 492 frauds (0.173%); Dal Pozzolo et al. (2015)"
+Scale,148 MB versus petabyte-scale production data
+Split,"Chronological 80/20: 227,845 development (417 frauds) / 56,962 test (75 frauds); 5-fold walk-forward validation"
+Model,"XGBoost, 400 trees, depth 4, learning rate 0.05, subsample 0.8, scale_pos_weight 545, seed 42"
+Benchmarks,Logistic regression PR-AUC 0.752; Isolation Forest PR-AUC 0.039
+Test performance,PR-AUC 0.793; ROC-AUC 0.987
+Threshold calibration,"0.54, cost-minimizing on walk-forward scores at $15 per false alarm (assumption)"
+Binary decision results,"TP 57, FN 18, FP 17, TN 56870; cost $2,893 vs $7,729 with no model (62.6% reduction)"
+Three-tier routing,"Step-up at 0.19, decline at 0.86; net cost $3,202 (assumes 90% step-up stop rate)"
+Latency,"Single transaction median 0.77 ms, p99 1.10 ms; budget 100 ms (arm64)"
+Explainability,"TreeSHAP reason codes per decision; top global features V4, V14, V12"
+Fairness (proxy),"Recall by amount quartile: Q1 84%, Q2 55%, Q3 78%, Q4 72% (small fraud counts)"
+Stability,"PR-AUC by window: T1 0.87, T2 0.79, T3 0.89, T4 0.55"
+Known limitations,"Anonymized PCA features (no feature engineering or plain-language reasons); no demographics, so fairness is a proxy; two days of 2013 data; no Time column (row order used); results vary slightly by hardware"
+Governance,"Recommended: drift-triggered retraining, independent validation and audit trail (SR 26-2)"
+Environment,"Python 3.14.6, xgboost 3.4.1, shap 0.54.1"

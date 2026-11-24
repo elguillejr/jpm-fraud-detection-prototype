@@ -1,0 +1,4 @@
+Model,PR-AUC (test),ROC-AUC (test),Recall @ 80% precision
+Isolation Forest,0.039,0.949,0.0
+Logistic regression,0.752,0.986,0.72
+XGBoost,0.793,0.987,0.76

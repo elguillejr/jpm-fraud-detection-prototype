@@ -1,0 +1,5 @@
+Segment,Transactions,Frauds,Recall,False positive rate (per 10k legit)
+Q1 smallest,14334,37,0.838,7.69
+Q2,14180,11,0.545,0.71
+Q3,14207,9,0.778,0.0
+Q4 largest,14241,18,0.722,3.52

@@ -1,0 +1,5 @@
+False-alarm cost $,Tuned threshold,False alarms,Fraud $ missed,Total test cost $
+5,0.19,75,2398.0,2773.0
+15,0.54,17,2638.0,2893.0
+50,0.86,9,2638.0,3088.0
+100,0.97,6,3635.0,4235.0

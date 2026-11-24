@@ -1,0 +1,7 @@
+,Transactions,% of volume,Legitimate customers affected,Frauds in tier,Frauds intercepted,Fraud $ lost,Friction cost $,Net cost $
+Tier 1: auto-approve,56827,99.763,0,15,0.0,2398,0,2398
+Tier 2: step-up challenge,69,0.121,66,3,2.7,24,330,354
+Tier 3: hard decline,66,0.116,9,57,57.0,0,450,450
+Three-tier total,56962,100.0,75,75,59.7,2422,780,3202
+Binary policy (decline at p >= 0.54),56962,100.0,17,75,57.0,2638,255,2893
+No model (approve all),56962,100.0,0,75,0.0,7729,0,7729

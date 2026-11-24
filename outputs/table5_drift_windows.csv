@@ -1,0 +1,5 @@
+Window,Transactions,Frauds,PR-AUC,Recall @ tuned threshold
+T1,14241,23,0.873,0.783
+T2,14241,30,0.787,0.767
+T3,14240,11,0.892,0.909
+T4,14240,11,0.545,0.545

@@ -1,0 +1,4 @@
+Scenario,Threshold,Fraud caught (TP),Fraud missed (FN),False alarms (FP),Correct approvals (TN),Precision,Recall,Fraud $ caught,Fraud $ missed,Total cost $
+No model (approve all),,0,75,0,56887,,0.0,0.0,7729.0,7729.0
+"XGBoost, default 0.50",0.5,57,18,19,56868,0.75,0.76,5091.0,2638.0,2923.0
+"XGBoost, cost-tuned",0.54,57,18,17,56870,0.77,0.76,5091.0,2638.0,2893.0
