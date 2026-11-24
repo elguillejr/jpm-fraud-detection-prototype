@@ -4,7 +4,7 @@ A scaled-down, end-to-end transaction-fraud detection system: model training and
 
 [![Open the notebook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elguillejr/jpm-fraud-detection-prototype/blob/main/JPM_Fraud_Prototype.ipynb)
 
-**Live demo:** _link added after deployment (see "Host the live demo" below)_
+**Live demo:** [jpm-fraud-demo-mist7400.streamlit.app](https://jpm-fraud-demo-mist7400.streamlit.app). Click **Start** to replay the test period as live traffic. The app sleeps when idle, so the first load can take a minute.
 
 > This is an academic project. It uses a public dataset, not JPMorgan Chase data, and is not affiliated with or endorsed by JPMorgan Chase & Co.
 
